@@ -40,19 +40,14 @@ function countSheep(arr) {
 function hasMPostCode(person) {
   if (person === undefined) throw new Error("person is required");
   // Your code here!
-  // if city is provided following method 
-//  const firstLetter=person.address.postCode[0];return firstLetter==="M" &&person.address.city ==="Manchester" 
+  let city = person.address.city;
+  let postCode = person.address.postCode;
+  return city === "Manchester" && postCode.slice(0, 1) === "M";
+  // made assumption that the city had to be Manchester and first digit
+  // of postcode 'M'.  
+  // If city was Manchester and postcode was not M then false
+  // If city wasn't Manchester then false
 
-//without city
-const firstLetter=person.address.postCode[0];
-const secondLetter=person.address.postCode[1];
-const isAlphabeticCharaccter=isNaN(Number(secondLetter)}
-return firstLetter==="M" && !isAlphabeticCharaccter;
-
-let personCity = person.address.city;
-  let personPostCode = person.address.postCode;
-  return personCity === "Manchester" && personPostCode.slice(0,1) === "M";
-}
 }
 
 
