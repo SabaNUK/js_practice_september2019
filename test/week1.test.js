@@ -79,13 +79,14 @@ describe("reverseWord", () => {
   test("returns the provided word, reversed", () => {
     expect(reverseWord("foo")).toBe("oof");
   });
+});
 
   test("returns a longer sentence, reversed", () => {
     expect(reverseWord("why would you even want to do this?")).toBe(
       "?siht od ot tnaw neve uoy dluow yhw"
     );
   });
-});
+
 
 describe("reverseAllWords", () => {
   test("reverses a single word in an array", () => {
